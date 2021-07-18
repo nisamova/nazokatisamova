@@ -1,14 +1,19 @@
 import logo from "../logo.svg"
-
-import "./Header.css"
+import { Container, Row, Col } from "react-bootstrap"
 
 function Header() {
   return (
-    <div className="App">
-      <header className="Flower-wreath">
-        <img src={logo} className="Flower-logo" alt="logo" />
-      </header>
-    </div>
+    <>
+      <Container>
+        <Row>
+          <Col>
+            <header>
+              <h1>Nazokat Isamova</h1>
+            </header>
+          </Col>
+        </Row>
+      </Container>
+    </>
   )
 }
 

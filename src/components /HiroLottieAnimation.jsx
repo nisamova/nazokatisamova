@@ -1,6 +1,7 @@
 import React from "react"
 import Lottie from "react-lottie"
 import animationData from "../lotties/motherhood-nature.json"
+import { Container, Row, Col } from "react-bootstrap"
 
 const defaultOptions = {
   loop: false,
@@ -13,10 +14,16 @@ const defaultOptions = {
 
 function HiroLottieAnimation() {
   return (
-    <div>
-      <h1>Hello</h1>
-      <Lottie options={defaultOptions} height={600} width={1200} />
-    </div>
+    <Container>
+      <Row>
+        <Col xs={6}>
+          <Lottie options={defaultOptions} height={450} width={600} />
+        </Col>
+        <Col>
+          <h1>Nazokat Isamova</h1>
+        </Col>
+      </Row>
+    </Container>
   )
 }
 

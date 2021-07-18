@@ -1,17 +1,16 @@
-import "./App.css"
-import { BrowserRouter as Router, Route } from "react-router-dom"
-import Header from "./components /Header"
-import Footer from "./components /Footer"
+import Layout from "./components /Layout"
 import HiroLottieAnimation from "./components /HiroLottieAnimation"
 import Nasaimage from "./components /NasaImage"
+import Articles from "./components /Articles"
 
 function App() {
   return (
     <>
-      <Header />
-      <HiroLottieAnimation />
-      <Nasaimage />
-      <Footer />
+      <Layout>
+        <Articles />
+        <HiroLottieAnimation />
+        <Nasaimage />
+      </Layout>
     </>
   )
 }

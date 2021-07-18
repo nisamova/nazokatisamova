@@ -5,7 +5,7 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .Flower-logo {
-    animation: Flower-logo-spin infinite 40s linear;
+    animation: Flower-logo-spin initial 10s linear;
   }
 }
 
