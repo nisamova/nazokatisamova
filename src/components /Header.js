@@ -6,29 +6,33 @@ import {
   SiLinkedin
 } from "react-icons/si"
 import { IoAttachSharp } from "react-icons/io5"
-import { Container, Row, Col } from "react-bootstrap"
+import { Navbar, Container, Row, Col, Nav } from "react-bootstrap"
 
 function Header() {
   return (
     <>
       <Container>
-        <Row>
-          <header>
-            <Col>
-              <h1>Nazokat Isamova</h1>
-              <IoAttachSharp /> Resume
-            </Col>
-          </header>
-          <Row>
-            <Col>
-              <SiLinkedin />
-              <SiGithub />
-              <SiTwitter />
-              <SiFreecodecamp />
-              <SiDatacamp />
-            </Col>
-          </Row>
-        </Row>
+        <Navbar>
+          <Container>
+            <Navbar.Brand href="/">Nazokat Isamova</Navbar.Brand>
+            <IoAttachSharp /> Resume
+            <Nav>
+              <Nav.Link href="#">Articles</Nav.Link>
+              <Nav.Link href="#">About</Nav.Link>
+            </Nav>
+          </Container>
+          <Container>
+            <Row>
+              <Col>
+                <SiLinkedin />
+                <SiGithub />
+                <SiTwitter />
+                <SiFreecodecamp />
+                <SiDatacamp />
+              </Col>
+            </Row>
+          </Container>
+        </Navbar>
       </Container>
     </>
   )

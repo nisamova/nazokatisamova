@@ -16,8 +16,8 @@ function HiroLottieAnimation() {
   return (
     <Container>
       <Row>
-        <Col xs={6}>
-          <Lottie options={defaultOptions} height={450} width={600} />
+        <Col>
+          <Lottie options={defaultOptions} height={300} width={450} />
         </Col>
         <Col>
           <h1>Nazokat Isamova</h1>

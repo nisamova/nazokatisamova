@@ -11,10 +11,16 @@ export default function Nasaimage() {
   return (
     <Container fluid>
       <Row>
-        <Col sm={8}>
-          <Image src={data.url} alt={data.title} fluid />
+        <Col>
+          <Image
+            src={data.url}
+            alt={data.title}
+            height={350}
+            width={350}
+            fluid
+          />
         </Col>
-        <Col sm={4}>
+        <Col>
           <p>{data.date}</p>
           <h2>{data.title}</h2>
           <p>{data.description}</p>
