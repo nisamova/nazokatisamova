@@ -1,41 +1,33 @@
-import {
-  SiDatacamp,
-  SiTwitter,
-  SiFreecodecamp,
-  SiGithub,
-  SiLinkedin
-} from "react-icons/si"
-import { IoAttachSharp } from "react-icons/io5"
-import { Navbar, Container, Row, Col, Nav } from "react-bootstrap"
+import { Navbar, Container, Nav } from "react-bootstrap"
 
 function Header() {
   return (
     <>
-      <Container>
-        <Navbar>
-          <Container>
-            <Navbar.Brand href="/">Nazokat Isamova</Navbar.Brand>
-            <IoAttachSharp /> Resume
-            <Nav>
-              <Nav.Link href="#">Articles</Nav.Link>
-              <Nav.Link href="#">About</Nav.Link>
-            </Nav>
-          </Container>
-          <Container>
-            <Row>
-              <Col>
-                <SiLinkedin />
-                <SiGithub />
-                <SiTwitter />
-                <SiFreecodecamp />
-                <SiDatacamp />
-              </Col>
-            </Row>
-          </Container>
-        </Navbar>
-      </Container>
+      <header style={{ backgroundColor: `#f5cac3` }}>
+        <Container fluid>
+          <Navbar>
+            <Container>
+              <Navbar.Brand href="/">
+                <h1>Nazokat Isamova</h1>
+              </Navbar.Brand>
+              <Nav>
+                <Nav.Link href="#">Articles</Nav.Link>
+                <Nav.Link href="#">About</Nav.Link>
+              </Nav>
+            </Container>
+          </Navbar>
+        </Container>
+      </header>
     </>
   )
 }
 
 export default Header
+/** Theme Colors
+ * OffWhite -- #f7ede2
+ * Pink-Nude -- #f5cac3
+ * Green -- #84a59d
+ * Pastel-Red -- #f28482
+ * Yellow -- #f6bd60
+ * Text -- #2b2d42
+ */

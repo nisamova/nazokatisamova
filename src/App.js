@@ -1,16 +1,15 @@
 import Layout from "./components /Layout"
-import HiroLottieAnimation from "./components /HiroLottieAnimation"
 import Nasaimage from "./components /NasaImage"
 import Articles from "./components /Articles"
 import Githublogin from "./components /Githublogin"
+import "bootstrap/dist/css/bootstrap.min.css"
 
 function App(login) {
   return (
     <>
       <Layout>
-        <Articles />
-        <HiroLottieAnimation />
         <Githublogin login="nisamova" />
+        <Articles />
         <Nasaimage />
       </Layout>
     </>

@@ -5,19 +5,17 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .Flower-logo {
-    animation: Flower-logo-spin initial 10s linear;
+    animation: Flower-logo-spin infinite 60s linear;
   }
 }
 
 .Flower-wreath {
-  background-color: #f5f3ef;
   min-height: 20vh;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: #fabeb9;
 }
 
 @keyframes Flower-logo-spin {

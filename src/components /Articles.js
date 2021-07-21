@@ -8,5 +8,9 @@ export default function Articles() {
   )
   if (loading) return <h1> loading....</h1>
   if (error) return <pre>{JSON.stringify(error, null, 2)}</pre>
-  return <Row>{console.log}</Row>
+  return (
+    <Row>
+      <pre>{console.log}</pre>
+    </Row>
+  )
 }
