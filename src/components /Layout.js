@@ -1,21 +1,23 @@
 import React from "react"
-import Focus from "./Focus"
 import Footer from "./Footer"
 import Header from "./Header"
+import Githublogin from "./Githublogin"
 
-export default function Layout({ children }) {
+export default function Layout({ children, login }) {
   return (
-    <div
-      style={{
-        margin: `auto`,
-        maxWidth: 1500,
-        justifyContent: `center`
-      }}
-    >
-      <Focus />
+    <>
       <Header />
-      {children}
-      <Footer />
-    </div>
+      <Githublogin login="nisamova" />
+      <div
+        style={{
+          margin: `auto`,
+          maxWidth: 1500,
+          justifyContent: `center`
+        }}
+      >
+        {children}
+        <Footer />
+      </div>
+    </>
   )
 }

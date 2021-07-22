@@ -1,18 +1,21 @@
 import { Navbar, Container, Nav } from "react-bootstrap"
+import Social from "./Social"
 
 function Header() {
   return (
     <>
-      <header style={{ backgroundColor: `#f5cac3` }}>
+      <header>
         <Container fluid>
           <Navbar>
             <Container>
               <Navbar.Brand href="/">
-                <h1>Nazokat Isamova</h1>
+                <h1 style={{ color: `#f28482` }}>Nazokat Isamova</h1>
               </Navbar.Brand>
               <Nav>
                 <Nav.Link href="#">Articles</Nav.Link>
-                <Nav.Link href="#">About</Nav.Link>
+                <Nav.Link>
+                  <Social style={{ color: `black` }} />
+                </Nav.Link>
               </Nav>
             </Container>
           </Navbar>

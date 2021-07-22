@@ -17,7 +17,10 @@ function HiroLottieAnimation() {
     <Container>
       <Row>
         <Col>
-          <Lottie options={defaultOptions} height={450} width={750} />
+          <Lottie
+            options={defaultOptions}
+            style={{ maxWidth: `100%`, maxHeight: `100%` }}
+          />
         </Col>
       </Row>
     </Container>
