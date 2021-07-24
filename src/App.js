@@ -1,28 +1,21 @@
-import Layout from "./components /Layout"
-import Nasaimage from "./components /NasaImage"
-import Articles from "./components /Articles"
+import React from "react"
+import HomePage from "./pages/HomePage"
+import ArticlePage from "./pages/ArticlePage"
+import NotFoundPage from "./pages/NotFoundPage"
 import "bootstrap/dist/css/bootstrap.min.css"
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 
-function App(login) {
+function App() {
   return (
     <>
-      <Layout>
-        <Articles />
-        <Nasaimage />
-      </Layout>
+      <Router>
+        <Switch>
+          <Route path="/" component={HomePage} exact />
+          <Route path="/articles" component={ArticlePage} />
+          <Route component={NotFoundPage} />
+        </Switch>
+      </Router>
     </>
   )
 }
 export default App
-
-/*
-  return (
-    <Router>
-      <div className="App">
-        <Header />
-        <Route path="/" component={HomePage} exact />
-        <Footer />
-      </div>
-    </Router>
-  )
-*/

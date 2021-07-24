@@ -1,4 +1,6 @@
+import React from "react"
 import { Navbar, Container, Nav } from "react-bootstrap"
+import { Link } from "react-router-dom"
 import Social from "./Social"
 
 function Header() {
@@ -8,11 +10,18 @@ function Header() {
         <Container fluid>
           <Navbar>
             <Container>
-              <Navbar.Brand href="/">
-                <h1 style={{ color: `#f28482` }}>Nazokat Isamova</h1>
+              <Navbar.Brand>
+                <Link to="/">
+                  {" "}
+                  <h1 style={{ color: `#f28482` }}>Nazokat Isamova</h1>
+                </Link>
               </Navbar.Brand>
               <Nav>
-                <Nav.Link href="#">Articles</Nav.Link>
+                <Nav.Link>
+                  <Link to="/articles" exact>
+                    Articles{" "}
+                  </Link>
+                </Nav.Link>
                 <Nav.Link>
                   <Social style={{ color: `black` }} />
                 </Nav.Link>

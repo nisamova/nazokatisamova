@@ -16,7 +16,7 @@ export default function Nasaimage() {
             src={data.url}
             alt={data.title}
             height={350}
-            width={350}
+            width={550}
             fluid
           />
         </Col>
