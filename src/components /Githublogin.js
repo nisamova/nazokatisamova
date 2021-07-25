@@ -1,6 +1,6 @@
 import React from "react"
 import { useFetch } from "./useFetch"
-import { Image, Col, Row, Container } from "react-bootstrap"
+import { Image, Col, Row, Container, Card } from "react-bootstrap"
 import HiroLottieAnimation from "./HiroLottieAnimation"
 import {
   IoAttachSharp,
@@ -26,29 +26,31 @@ export default function Githublogin({ login }) {
       >
         <Row>
           <Col>
-            <Image
-              src={data.avatar_url}
-              alt={data.login}
-              roundedCircle
-              height={100}
-              width={100}
-            />{" "}
-            {data.name && <p>{data.name}</p>}
-            <p>
-              <IoLocationOutline />
-              &nbsp;{data.location}
-            </p>
-            <p>
-              {" "}
-              <IoGitBranchOutline />
-              Github Repositories: {data.public_repos}
-            </p>
-            <IoAttachSharp /> Resume <br />
-            <SiFreecodecamp
-              size={30}
-              style={{ margin: `5`, color: `#f28482` }}
-            />
-            <SiDatacamp size={30} style={{ margin: `5`, color: `#f28482` }} />
+            <Card>
+              <Image
+                src={data.avatar_url}
+                alt={data.login}
+                rounded
+                height={200}
+                width={200}
+              />{" "}
+              {data.name && <p>{data.name}</p>}
+              <p>
+                <IoLocationOutline />
+                &nbsp;{data.location}
+              </p>
+              <p>
+                {" "}
+                <IoGitBranchOutline />
+                Github Repositories: {data.public_repos}
+              </p>
+              <IoAttachSharp /> Resume <br />
+              <SiFreecodecamp
+                size={30}
+                style={{ margin: `5`, color: `#f28482` }}
+              />
+              <SiDatacamp size={30} style={{ margin: `5`, color: `#f28482` }} />
+            </Card>
           </Col>
           <Col>
             <HiroLottieAnimation />

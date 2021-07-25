@@ -1,6 +1,6 @@
 import React from "react"
 import { useFetch } from "./useFetch"
-import { Container, Row, Col, Image } from "react-bootstrap"
+import { Container, Row, Col, Image, Card } from "react-bootstrap"
 
 export default function Nasaimage() {
   const { loading, data, error } = useFetch(
@@ -12,18 +12,67 @@ export default function Nasaimage() {
     <Container fluid>
       <Row>
         <Col>
-          <Image
-            src={data.url}
-            alt={data.title}
-            height={350}
-            width={550}
-            fluid
-          />
+          <Card>
+            <Image
+              src={data.url}
+              alt={data.title}
+              height={400}
+              width={400}
+              fluid
+            />
+            <Card.Body>
+              <Card.Title>
+                <h4>{data.title}</h4>
+                <p>{data.description}</p>
+                <p>{data.date}</p>
+              </Card.Title>
+              <Card.Text>
+                <p>{data.explanation}</p>
+              </Card.Text>
+            </Card.Body>
+          </Card>
         </Col>
         <Col>
-          <p>{data.date}</p>
-          <h2>{data.title}</h2>
-          <p>{data.description}</p>
+          <Card>
+            <Image
+              src={data.url}
+              alt={data.title}
+              height={400}
+              width={400}
+              fluid
+            />
+            <Card.Body>
+              <Card.Title>
+                <h4>{data.title}</h4>
+                <p>{data.description}</p>
+                <p>{data.date}</p>
+              </Card.Title>
+              <Card.Text>
+                <p>{data.explanation}</p>
+              </Card.Text>
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col>
+          <Card>
+            <Image
+              src={data.url}
+              alt={data.title}
+              height={400}
+              width={400}
+              fluid
+            />
+            <Card.Body>
+              <Card.Title>
+                <h4>{data.title}</h4>
+                <p>{data.description}</p>
+                <p>{data.date}</p>
+              </Card.Title>
+              <Card.Text>
+                <p>{data.explanation}</p>
+              </Card.Text>
+            </Card.Body>
+          </Card>
         </Col>
       </Row>
     </Container>
