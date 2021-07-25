@@ -14,7 +14,7 @@ export default function NotFoundPage() {
         >
           <Row>
             <Col>
-              <h1>Page does not Exist/ 404</h1>
+              <h1>Page does not Exist</h1>
             </Col>
           </Row>
           <Row>
