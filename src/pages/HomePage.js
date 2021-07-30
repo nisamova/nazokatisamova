@@ -1,16 +1,17 @@
 import React from "react"
 import Layout from "../components /Layout"
 import Githublogin from "../components /Githublogin"
-import Nasaimage from "../components /NasaImage"
 import Articles from "../components /Articles"
+import NasaImages from "../components /NasaImages"
+import HiroLottieAnimation from "../components /HiroLottieAnimation"
 
 export default function HomePage() {
   return (
     <>
       <Layout>
-        <Githublogin login="nisamova" />
+        <HiroLottieAnimation />
         <Articles />
-        <Nasaimage />
+        <NasaImages />
       </Layout>
     </>
   )

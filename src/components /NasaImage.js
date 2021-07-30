@@ -23,49 +23,6 @@ export default function Nasaimage() {
             <Card.Body>
               <Card.Title>
                 <h4>{data.title}</h4>
-                <p>{data.description}</p>
-                <p>{data.date}</p>
-              </Card.Title>
-              <Card.Text>
-                <p>{data.explanation}</p>
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col>
-          <Card>
-            <Image
-              src={data.url}
-              alt={data.title}
-              height={400}
-              width={400}
-              fluid
-            />
-            <Card.Body>
-              <Card.Title>
-                <h4>{data.title}</h4>
-                <p>{data.description}</p>
-                <p>{data.date}</p>
-              </Card.Title>
-              <Card.Text>
-                <p>{data.explanation}</p>
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col>
-          <Card>
-            <Image
-              src={data.url}
-              alt={data.title}
-              height={400}
-              width={400}
-              fluid
-            />
-            <Card.Body>
-              <Card.Title>
-                <h4>{data.title}</h4>
-                <p>{data.description}</p>
                 <p>{data.date}</p>
               </Card.Title>
               <Card.Text>

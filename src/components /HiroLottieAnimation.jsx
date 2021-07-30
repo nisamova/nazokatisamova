@@ -14,12 +14,12 @@ const defaultOptions = {
 
 function HiroLottieAnimation() {
   return (
-    <Container>
+    <Container fluid>
       <Row>
         <Col>
           <Lottie
             options={defaultOptions}
-            style={{ maxWidth: `100%`, maxHeight: `100%` }}
+            style={{ maxWidth: `100%`, maxHeight: `70%` }}
           />
         </Col>
       </Row>

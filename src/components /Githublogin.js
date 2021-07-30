@@ -1,14 +1,6 @@
 import React from "react"
 import { useFetch } from "./useFetch"
-import { Image, Col, Row, Container, Card } from "react-bootstrap"
-import HiroLottieAnimation from "./HiroLottieAnimation"
-import {
-  IoAttachSharp,
-  IoLocationOutline,
-  IoGitBranchOutline
-} from "react-icons/io5"
-import { SiFreecodecamp, SiDatacamp } from "react-icons/si"
-
+import { Image, Col, Row, Container } from "react-bootstrap"
 export default function Githublogin({ login }) {
   const { loading, data, error } = useFetch(
     `https://api.github.com/users/${login}`
@@ -18,45 +10,44 @@ export default function Githublogin({ login }) {
   return (
     <>
       <Container
+        fluid
         style={{
           textAlign: `center`,
-          backgroundImage: `linear-gradient(to right, rgba(245, 202, 195), rgba(242, 132, 130))`,
           maxWidth: `100%`
         }}
       >
         <Row>
           <Col>
-            <Card>
-              <Image
-                src={data.avatar_url}
-                alt={data.login}
-                rounded
-                height={200}
-                width={200}
-              />{" "}
-              {data.name && <p>{data.name}</p>}
-              <p>
-                <IoLocationOutline />
-                &nbsp;{data.location}
-              </p>
-              <p>
-                {" "}
-                <IoGitBranchOutline />
-                Github Repositories: {data.public_repos}
-              </p>
-              <IoAttachSharp /> Resume <br />
-              <SiFreecodecamp
-                size={30}
-                style={{ margin: `5`, color: `#f28482` }}
-              />
-              <SiDatacamp size={30} style={{ margin: `5`, color: `#f28482` }} />
-            </Card>
+            <Image
+              src={data.avatar_url}
+              alt={data.login}
+              roundedCircle
+              height={50}
+              width={50}
+            />
           </Col>
-          <Col>
-            <HiroLottieAnimation />
-          </Col>
+          <Col>{data.name}</Col>
         </Row>
       </Container>
     </>
   )
 }
+/** 
+ * import {
+  IoAttachSharp,
+  IoLocationOutline,
+  IoGitBranchOutline
+} from "react-icons/io5"
+ * <div>
+              <IoLocationOutline style={{ margin: `5`, color: `#f28482` }} />
+              &nbsp;{data.location}
+            </div>
+            <div>
+              {" "}
+              <IoGitBranchOutline style={{ margin: `5`, color: `#f28482` }} />
+              Github Repositories: {data.public_repos}
+            </div>
+            <div>
+              <IoAttachSharp style={{ margin: `5`, color: `#f28482` }} /> Resume{" "}
+              <br />
+            </div> */

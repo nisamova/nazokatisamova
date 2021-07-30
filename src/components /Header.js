@@ -2,6 +2,7 @@ import React from "react"
 import { Navbar, Container, Nav } from "react-bootstrap"
 import { Link } from "react-router-dom"
 import Social from "./Social"
+import Githublogin from "./Githublogin"
 
 function Header() {
   return (
@@ -9,21 +10,33 @@ function Header() {
       <header>
         <Container fluid>
           <Navbar>
-            <Container>
+            <Container fluid>
               <Navbar.Brand>
-                <Link to="/">
-                  {" "}
-                  <h1 style={{ color: `#f28482` }}>Nazokat Isamova</h1>
+                <Link
+                  to="/"
+                  style={{
+                    color: `#f28482`,
+                    textDecoration: `none`
+                  }}
+                >
+                  <Githublogin login="nisamova" />
                 </Link>
               </Navbar.Brand>
               <Nav>
                 <Nav.Link>
-                  <Link to="/articles" exact>
+                  <Link
+                    to="/articles"
+                    exact
+                    style={{
+                      color: `#000000`,
+                      textDecoration: `none`
+                    }}
+                  >
                     Articles{" "}
                   </Link>
                 </Nav.Link>
                 <Nav.Link>
-                  <Social style={{ color: `black` }} />
+                  <Social />
                 </Nav.Link>
               </Nav>
             </Container>
@@ -35,6 +48,7 @@ function Header() {
 }
 
 export default Header
+
 /** Theme Colors
  * OffWhite -- #f7ede2
  * Pink-Nude -- #f5cac3
