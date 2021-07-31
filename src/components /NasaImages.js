@@ -15,7 +15,7 @@ function NasaImages() {
   }, [])
 
   return (
-    <div>
+    <>
       <h1>Previous Nasa Images</h1>
       {data.map(media => (
         <div key={media.date}>
@@ -31,7 +31,7 @@ function NasaImages() {
           <p>{media.explanation}</p>
         </div>
       ))}
-    </div>
+    </>
   )
 }
 

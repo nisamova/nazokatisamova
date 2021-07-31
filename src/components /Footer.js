@@ -13,21 +13,19 @@ function Footer() {
         }}
       >
         <Row>
-          <Col>
-            <footer className="Flower-wreath,">
-              <Link to="/" exact>
-                {" "}
-                <Image
-                  src={logo}
-                  className="Flower-logo"
-                  alt="logo"
-                  height={120}
-                  width={120}
-                />
-              </Link>
-              <Social style={{ width: `20px` }} />
-              <p>&copy;2021 Made by Nazokat Isamova</p>
-            </footer>
+          <Col className="Flower-wreath">
+            <Link id="RouterNavLink" to="/" exact>
+              {" "}
+              <Image
+                src={logo}
+                className="Flower-logo"
+                alt="logo"
+                height={120}
+                width={120}
+              />
+            </Link>
+            <Social style={{ width: `20px` }} />
+            <p>&copy;2021 Made by Nazokat Isamova</p>
           </Col>
         </Row>
       </Container>

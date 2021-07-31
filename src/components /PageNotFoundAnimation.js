@@ -14,7 +14,7 @@ const defaultOptions = {
 
 export default function PageNotFoundAnimation() {
   return (
-    <div>
+    <>
       <Container>
         <Row>
           <Col>
@@ -25,6 +25,6 @@ export default function PageNotFoundAnimation() {
           </Col>
         </Row>
       </Container>
-    </div>
+    </>
   )
 }

@@ -1,48 +1,48 @@
 import React from "react"
-import { Navbar, Container, Nav } from "react-bootstrap"
+import { Navbar, Container, Nav, Row, Col } from "react-bootstrap"
 import { Link } from "react-router-dom"
-import Social from "./Social"
 import Githublogin from "./Githublogin"
 
 function Header() {
   return (
     <>
-      <header>
-        <Container fluid>
-          <Navbar>
-            <Container fluid>
-              <Navbar.Brand>
-                <Link
-                  to="/"
-                  style={{
-                    color: `#f28482`,
-                    textDecoration: `none`
-                  }}
-                >
-                  <Githublogin login="nisamova" />
-                </Link>
-              </Navbar.Brand>
-              <Nav>
-                <Nav.Link>
+      <Container fluid>
+        <Row>
+          <Col>
+            <Navbar>
+              <Container fluid>
+                <Navbar.Brand>
                   <Link
-                    to="/articles"
-                    exact
+                    id="RouterNavLink"
+                    to="/"
                     style={{
-                      color: `#000000`,
+                      color: `#f28482`,
                       textDecoration: `none`
                     }}
                   >
-                    Articles{" "}
+                    <Githublogin login="nisamova" />
                   </Link>
-                </Nav.Link>
-                <Nav.Link>
-                  <Social />
-                </Nav.Link>
-              </Nav>
-            </Container>
-          </Navbar>
-        </Container>
-      </header>
+                </Navbar.Brand>
+                <Nav>
+                  <Nav.Link>
+                    <Link
+                      id="RouterNavLink"
+                      to="/articles"
+                      exact
+                      style={{
+                        color: `#000000`,
+                        textDecoration: `none`
+                      }}
+                    >
+                      Articles{" "}
+                    </Link>
+                  </Nav.Link>
+                </Nav>
+              </Container>
+            </Navbar>
+          </Col>
+        </Row>
+      </Container>
     </>
   )
 }

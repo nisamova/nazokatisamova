@@ -15,7 +15,7 @@ function Articles() {
   }, [])
 
   return (
-    <div>
+    <>
       <h1>Articles</h1>
       {data.map(article => (
         <div key={article.id}>
@@ -25,7 +25,7 @@ function Articles() {
           {article.excerpt.rendered}
         </div>
       ))}
-    </div>
+    </>
   )
 }
 
